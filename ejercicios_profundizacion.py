@@ -35,19 +35,25 @@ def ej1():
     sino que va hasta el anterior
     '''
 
-    # inicio = ....
-    # fin = ....
+    inicio = int (input("ingrese numero de inicio:\n"))
+    fin =  int (input("ingrese numero de fin: \n"))
 
-    # cantidad_numeros ....
-    # sumatoria ....
+    cantidad_numeros= 0
+    sumatoria = 0
 
     # bucle.....
+    for i in range( inicio, (fin+1)):
+        cantidad_numeros += 1
+        sumatoria +=i
+    
+    print("Cantidad de numeros= {} ".format(cantidad_numeros))
+    print("Sumatoria total es= {} ".format(sumatoria))
 
     # Al terminar el bucle calcular el promedio como:
-    # promedio = sumatoria / cantidad_numeros
+    promedio = sumatoria / cantidad_numeros
 
     # Imprimir resultado en pantalla
-
+    print(promedio)
 
 def ej2():
     print("Mi Calculadora (^_^)")
@@ -62,8 +68,42 @@ def ej2():
     Se debe debe imprimir un cartel de error si el operador ingresado no es
     alguno de lo soportados o no es la palabra "FIN"
     '''
-
-
+    while True:
+        print("*Bienvenido a la calculadora*\n")
+        print("ingrese los numeros que desea calcular:")
+        numero_1= int(input("ingrese el primer numero a operar\n"))
+        numero_2= int(input("ingrese el segundo numero a opererar\n"))
+        print("-------------")
+        print("Perfecto, ingrese la operacion deseada('FIN' para finalizar): \n")
+        print("-------------")
+        print("Suma (+)")
+        print("Resta (-)")
+        print("Multiplicación (*)")
+        print("División (/)")
+        print("Exponente/Potencia (**)\n")
+        print("-------------")
+        seleccion= str(input())
+  
+        if seleccion == "+":
+            suma=numero_1 + numero_2
+            print("el resultado es:",suma,("\n"))
+        elif seleccion == "-":
+            resta=numero_1 - numero_2
+            print("el resultado es:",resta)
+        elif seleccion == "*":
+            multiplicacion=numero_1 * numero_2
+            print("el resultado es:",multiplicacion)
+        elif seleccion == "/":
+            division=numero_1 /numero_2
+            print("el resultado es:",division)
+        elif seleccion == "**":
+            exponente=numero_1 ** numero_2
+            print("el resultado es:",exponente)
+        elif seleccion == "FIN":
+            break
+        else: 
+            print("no es posible realizar la operacion, intente nuevamente")
+        
 def ej3():
     print("Mi organizador académico (#_#)")
 
@@ -103,7 +143,6 @@ def ej3():
     # a calificación con letras, imprima en pantalla el resultado
 
     # Imprima en pantalla al cantidad de ausentes
-
 
 def ej4():
     print("Mi primer pasito en data analytics")
@@ -178,7 +217,6 @@ def ej4():
     # Imprima el resultado en pantalla
     # Debe utilizar temperatura_max y temperatura_min para definirlo
 
-
 def ej5():
     print("Ahora sí! buena suerte :)")
 
@@ -250,7 +288,7 @@ def ej5():
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     #ej1()
-    #ej2()
+    ej2()
     #ej3()
     #ej4()
     #ej5()

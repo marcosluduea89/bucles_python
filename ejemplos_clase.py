@@ -197,7 +197,7 @@ def buscar_max():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     bucle_while()
-    bucle_for()
-    contador()
-    sumatoria()
-    buscar_max()
+    #bucle_for()
+    #contador()
+    #sumatoria()
+    #buscar_max()
